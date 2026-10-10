@@ -7,5 +7,6 @@ T05        PATCH existing issue status = Resolved          200; returned status 
 T06            PATCH status = Deleted                             400; VALIDATION_ERROR. 
 T07            PATCH unknown issue ID                             404; ISSUE_NOT_FOUND. 
 T08           GET when no issues exist                           200; empty JSON array. 
-T09       Send unexpected extra server-owned fields           
+T09       Send unexpected extra server-owned fields           Server ignores/rejects according to contract; client cannot choose
+                                                                    authoritative id/status/createdAt. 
  
